@@ -16,18 +16,20 @@ def neighbors(pattern, d):
     for text in suffix_neighbors:
         if hamming_distance(pattern[1:], text) < d:
             for nucleotide in nucleotides:
-                neighborhood.append(pattern[0] + text)
+                neighborhood.append(nucleotide + text)
         else:
             neighborhood.append(pattern[0] + text)
     
     return neighborhood
 
+# Input
 text = 'ACG'
 d = 1
 
+# Generate neighbors
 result = neighbors(text, d)
 
+# Write the result to a file
 with open('neighbors.txt', 'w') as f:
     for neighborhood in result:
-        f.write(neighbors + '\n')
-
+        f.write(neighborhood + '\n')  # Fix: Use 'neighborhood' here
