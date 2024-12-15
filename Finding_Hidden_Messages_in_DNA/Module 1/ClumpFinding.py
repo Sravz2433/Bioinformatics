@@ -19,3 +19,4 @@ L =50
 t = 4
 clump = ClumpFinding(text, k, t, L)
 print(' '.join(clump))
+#print(len(clump))
