@@ -22,7 +22,7 @@ def better_frequent_words(text, k):
     
     return frequent_patterns
 
-text = "ACGTTGCATGTCGCATGATGCATGAGAGCT"
-k = 4
+text = "CGGAGGACTCTAGGTAACGCTTATCAGGTCCATAGGACATTCA"
+k = 3
 result = better_frequent_words(text, k)
 print("Most frequent k-mers:", result)
